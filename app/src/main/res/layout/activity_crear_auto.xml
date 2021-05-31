@@ -12,6 +12,142 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Crear Auto"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="172dp" />
+        android:textColorHint="#F44336"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Marca"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edtCChasis"
+        app:layout_constraintTop_toBottomOf="@+id/tvC1" />
+
+    <EditText
+        android:id="@+id/edtCChasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Chasis"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/edtCCilindrada"
+        app:layout_constraintTop_toBottomOf="@+id/edtCMarca" />
+
+    <EditText
+        android:id="@+id/edtCCilindrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Cilindrada"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/edtCDescripcion"
+        app:layout_constraintStart_toStartOf="@+id/edtCDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/edtCChasis" />
+
+    <Spinner
+        android:id="@+id/spCTipoAuto"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCCilindrada" />
+
+    <EditText
+        android:id="@+id/edtCDescripcion"
+        android:layout_width="214dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Detalle"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spCTipoAuto" />
+
+    <EditText
+        android:id="@+id/edtCPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="Precio"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtCDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/edtCDescripcion" />
+
+    <EditText
+        android:id="@+id/edtCColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Color"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edtCPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/edtCPrecio" />
+
+    <Button
+        android:id="@+id/btCReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCColor" />
+
+    <Button
+        android:id="@+id/btCSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Salir"
+        app:layout_constraintEnd_toStartOf="@+id/btCCrear"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCColor" />
+
+    <Button
+        android:id="@+id/btCCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Crear"
+        app:layout_constraintEnd_toStartOf="@+id/btCReset"
+        app:layout_constraintTop_toBottomOf="@+id/edtCColor" />
+
+    <TextView
+        android:id="@+id/tvCTipoAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Tipo Auto:"
+        app:layout_constraintBottom_toBottomOf="@+id/spCTipoAuto"
+        app:layout_constraintEnd_toStartOf="@+id/spCTipoAuto"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
