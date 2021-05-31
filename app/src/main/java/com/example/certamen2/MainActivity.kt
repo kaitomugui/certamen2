@@ -1,5 +1,6 @@
 package com.example.certamen2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -26,7 +27,10 @@ class MainActivity : AppCompatActivity() {
 
             if(etUsuario.text.toString() == usuario && etContra.text.toString() == password) {
                 Toast.makeText(this, "Conexion Correcta", Toast.LENGTH_LONG).show()
-
+                val acceso = Intent(this, MenuOpciones::class.java)
+                startActivity(acceso)
+            }else{
+                Toast.makeText(this, "Credenciales Incorrectas", Toast.LENGTH_LONG).show()
             }
         }
 
