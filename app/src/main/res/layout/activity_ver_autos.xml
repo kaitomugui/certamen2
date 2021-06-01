@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerAutos">
+
+    <TextView
+        android:id="@+id/tvV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="Mostrar Autos"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/spVIdAutos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spVIdAutos"
+        android:layout_width="182dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tvV2"
+        app:layout_constraintTop_toBottomOf="@+id/tvV1" />
+
+    <TextView
+        android:id="@+id/tvV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="Seleccione ID"
+        app:layout_constraintBottom_toBottomOf="@+id/spVIdAutos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btVMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="Mostrar"
+        app:layout_constraintEnd_toEndOf="@+id/spVIdAutos"
+        app:layout_constraintTop_toBottomOf="@+id/spVIdAutos" />
+
+    <TextView
+        android:id="@+id/tvV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="27dp"
+        android:text="Datos:"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/btVMostrar"
+        app:layout_constraintTop_toBottomOf="@+id/btVMostrar" />
+
+    <TextView
+        android:id="@+id/tvVMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvVChasis"
+        app:layout_constraintTop_toBottomOf="@+id/tvV3" />
+
+    <TextView
+        android:id="@+id/tvVTipoAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tvVDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/tvVCilindrada" />
+
+    <TextView
+        android:id="@+id/tvV7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Tipo de Auto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVTipoAuto"
+        app:layout_constraintTop_toBottomOf="@+id/tvV6" />
+
+    <TextView
+        android:id="@+id/tvV9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Precio de Venta"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/tvV8" />
+
+    <TextView
+        android:id="@+id/tvVPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvVTipoAuto"
+        app:layout_constraintStart_toEndOf="@+id/tvV3"
+        app:layout_constraintTop_toBottomOf="@+id/tvVDetalle" />
+
+    <TextView
+        android:id="@+id/tvVColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tvVPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/tvVPrecio" />
+
+    <TextView
+        android:id="@+id/tvV10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Color de Carrocería"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVColor"
+        app:layout_constraintTop_toBottomOf="@+id/tvV9" />
+
+    <TextView
+        android:id="@+id/tvVCilindrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvVChasis"
+        app:layout_constraintTop_toBottomOf="@+id/tvVChasis" />
+
+    <TextView
+        android:id="@+id/tvVDetalle"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvV3"
+        app:layout_constraintTop_toBottomOf="@+id/tvVTipoAuto" />
+
+    <TextView
+        android:id="@+id/tvV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Numero Chasis"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVChasis"
+        app:layout_constraintTop_toBottomOf="@+id/tvV4" />
+
+    <TextView
+        android:id="@+id/tvV6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Cilindrada"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVCilindrada"
+        app:layout_constraintTop_toBottomOf="@+id/tvV5" />
+
+    <TextView
+        android:id="@+id/tvV8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Detalle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/tvV7" />
+
+    <TextView
+        android:id="@+id/tvV4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Marca"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvVMarca"
+        app:layout_constraintTop_toBottomOf="@+id/tvV3" />
+
+    <TextView
+        android:id="@+id/tvVChasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvVTipoAuto"
+        app:layout_constraintStart_toStartOf="@+id/tvVTipoAuto"
+        app:layout_constraintTop_toBottomOf="@+id/tvVMarca" />
+
+    <Button
+        android:id="@+id/btVSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Salir"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btVMostrar"
+        app:layout_constraintEnd_toStartOf="@+id/btVMostrar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

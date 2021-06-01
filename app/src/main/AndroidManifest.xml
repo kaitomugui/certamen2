@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Certamen2">
-        <activity android:name=".CrearAuto"></activity>
+        <activity android:name=".VerAutos"></activity>
+        <activity android:name=".CrearAuto" />
         <activity android:name=".MenuOpciones" />
         <activity android:name=".MainActivity">
             <intent-filter>

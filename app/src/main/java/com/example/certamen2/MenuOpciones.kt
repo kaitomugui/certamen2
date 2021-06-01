@@ -23,6 +23,11 @@ class MenuOpciones : AppCompatActivity() {
             startActivity(acceso)
         }
 
+        bt2.setOnClickListener {
+            val acceso = Intent(this, VerAutos::class.java)
+            startActivity(acceso)
+        }
+
         bt6.setOnClickListener {
             finish()
         }
