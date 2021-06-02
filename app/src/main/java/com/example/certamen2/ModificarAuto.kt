@@ -1,5 +1,6 @@
 package com.example.certamen2
 
+import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -54,19 +55,38 @@ class ModificarAuto : AppCompatActivity() {
                 edtMMarca.setText(datosM1.getString(1))
                 edtMChasis.setText(datosM1.getString(2))
                 edtMCilindrada.setText(datosM1.getString(3))
-                //spMTipoAuto.selectedItem
+                when(datosM1.getString(4)){
+                   "Sedan" -> spMTipoAuto.setSelection(0)
+                    "SUV" -> spMTipoAuto.setSelection(1)
+                    "PickUp" -> spMTipoAuto.setSelection(2)
+                }
                 edtMDetalle.setText(datosM1.getString(5))
-                edtMColor.setText(datosM1.getString(6))
-                edtMPrecio.setText(datosM1.getString(7))
-
+                edtMPrecio.setText(datosM1.getString(6))
+                edtMColor.setText(datosM1.getString(7))
 
             } else
-                Toast.makeText(this, "No existe un artículo con dicha descripción", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "No existe un Auto con dicha id", Toast.LENGTH_SHORT).show()
             bd.close()
         }
 
         botonModificar.setOnClickListener {
-
+            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+            val bd = admin.writableDatabase
+            val registro = ContentValues()
+            registro.put("marca", edtMMarca.getText().toString())
+            registro.put("numero_chasis", edtMChasis.getText().toString())
+            registro.put("cilindrada", edtMCilindrada.getText().toString())
+            registro.put("tipo_auto", spMTipoAuto.selectedItem.toString())
+            registro.put("detalle", edtMDetalle.getText().toString())
+            registro.put("precio_venta", edtMPrecio.getText().toString())
+            registro.put("color", edtMColor.getText().toString())
+            val cant = bd.update("autos", registro, "id=${spMIdAutos.selectedItem.toString()}", null)
+            bd.close()
+            if (cant == 1) {
+                Toast.makeText(this, "Se modificaron los datos correctamente", Toast.LENGTH_SHORT).show()
+                finish()
+            }else
+                Toast.makeText(this, "no existe un auto con el id seleccionado", Toast.LENGTH_SHORT).show()
         }
 
         botonSalir.setOnClickListener {
