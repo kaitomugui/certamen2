@@ -35,88 +35,133 @@
         android:id="@+id/spMIdAutos"
         android:layout_width="192dp"
         android:layout_height="28dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtMMarca"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toEndOf="@+id/tvM2"
-        app:layout_constraintTop_toBottomOf="@+id/tvM1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvM1" />
 
     <EditText
         android:id="@+id/edtMMarca"
         android:layout_width="207dp"
         android:layout_height="59dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtMChasis"
         app:layout_constraintStart_toEndOf="@+id/tvM3" />
 
-    <EditText
-        android:id="@+id/edtMDetalle"
-        android:layout_width="210dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edtMPrecio"
-        app:layout_constraintStart_toEndOf="@+id/evM7" />
-
     <TextView
-        android:id="@+id/tvM3"
+        android:id="@+id/tvM9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="60dp"
-        android:text="Marca"
-        app:layout_constraintBottom_toTopOf="@+id/tvM4"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Color"
+        app:layout_constraintBottom_toBottomOf="@+id/edtMColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtMColor"
+        app:layout_constraintVertical_bias="0.461" />
 
     <TextView
         android:id="@+id/tvM4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="48dp"
         android:text="N°Chasis"
         app:layout_constraintBottom_toTopOf="@+id/tvM5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvM9"
+    <EditText
+        android:id="@+id/edtMCilindrada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/spMTipoAuto"
+        app:layout_constraintStart_toEndOf="@+id/tvM5" />
+
+    <EditText
+        android:id="@+id/edtMChasis"
+        android:layout_width="207dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtMCilindrada"
+        app:layout_constraintStart_toEndOf="@+id/tvM4" />
+
+    <EditText
+        android:id="@+id/edtMColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btMSalir"
+        app:layout_constraintStart_toEndOf="@+id/tvM9" />
+
+    <Spinner
+        android:id="@+id/spMTipoAuto"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Color"
-        app:layout_constraintBottom_toBottomOf="@+id/edtMColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edtMColor" />
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtMDetalle"
+        app:layout_constraintStart_toEndOf="@+id/tvM6" />
 
     <TextView
         android:id="@+id/evM7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="44dp"
         android:text="Detalle"
         app:layout_constraintBottom_toTopOf="@+id/tvM8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtMPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtMColor"
+        app:layout_constraintStart_toEndOf="@+id/tvM8" />
+
+    <TextView
+        android:id="@+id/tvM3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="56dp"
+        android:text="Marca"
+        app:layout_constraintBottom_toTopOf="@+id/tvM4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvM6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginBottom="48dp"
         android:text="Tipo Auto"
         app:layout_constraintBottom_toTopOf="@+id/evM7"
@@ -126,9 +171,9 @@
         android:id="@+id/tvM8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="40dp"
         android:text="Precio"
         app:layout_constraintBottom_toTopOf="@+id/tvM9"
         app:layout_constraintStart_toStartOf="parent" />
@@ -137,70 +182,24 @@
         android:id="@+id/tvM5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="40dp"
         android:text="Cilindrada"
         app:layout_constraintBottom_toTopOf="@+id/tvM6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/edtMCilindrada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/spMTipoAuto"
-        app:layout_constraintStart_toEndOf="@+id/tvM5" />
-
-    <Spinner
-        android:id="@+id/spMTipoAuto"
-        android:layout_width="214dp"
+        android:id="@+id/edtMDetalle"
+        android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtMDetalle"
-        app:layout_constraintStart_toEndOf="@+id/tvM6" />
-
-    <EditText
-        android:id="@+id/edtMColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginLeft="43dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btMSalir"
-        app:layout_constraintStart_toEndOf="@+id/tvM9" />
-
-    <EditText
-        android:id="@+id/edtMPrecio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/edtMColor"
-        app:layout_constraintStart_toEndOf="@+id/tvM8" />
-
-    <EditText
-        android:id="@+id/edtMChasis"
-        android:layout_width="207dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/edtMCilindrada"
-        app:layout_constraintStart_toEndOf="@+id/tvM4" />
+        app:layout_constraintBottom_toTopOf="@+id/edtMPrecio"
+        app:layout_constraintStart_toEndOf="@+id/evM7" />
 
     <Button
         android:id="@+id/btMModificar"
@@ -235,6 +234,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="Seleccion"
+        app:backgroundTint="#FF0000"
         app:layout_constraintEnd_toStartOf="@+id/tvM1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
