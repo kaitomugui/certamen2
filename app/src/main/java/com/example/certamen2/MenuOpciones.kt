@@ -32,6 +32,11 @@ class MenuOpciones : AppCompatActivity() {
             finish()
         }
 
+        bt5.setOnClickListener {
+            val acceso = Intent(this, AcercaDe::class.java)
+            startActivity(acceso)
+        }
+
 
 
 
