@@ -12,14 +12,14 @@ class AcercaDe : AppCompatActivity() {
         setContentView(R.layout.activity_acerca_de)
 
         val TextViewADV = findViewById<TextView>(R.id.TextViewADV)
-        val TextViewADD = findViewById<TextView>(R.id.TextViewADD)
-        val TextViewADC = findViewById<TextView>(R.id.TextViewADC)
-        val ButtonASalir = findViewById<TextView>(R.id.ButtonASalir)
+        //val TextViewADD = findViewById<TextView>(R.id.TextViewADD)
+        //val TextViewADC = findViewById<TextView>(R.id.TextViewADC)
+        val ButtonASalir = findViewById<Button>(R.id.buttonASalir)
 
 
         TextViewADV.setText("Version 1.0.0")
-        TextViewADD.text "Esta aplicacion es una base de datos con el cual puede ingresar nuevos datos modificarlos y eliminarlos sin generar conflictos entre un auto y otro"
-        TextViewADC.text "Desarrolladores: Franco Ortega Humberto Ponce Joaquin Hernandez"
+        //TextViewADD.text "Esta aplicacion es una base de datos con el cual puede ingresar nuevos datos modificarlos y eliminarlos sin generar conflictos entre un auto y otro"
+        //TextViewADC.text "Desarrolladores: Franco Ortega Humberto Ponce Joaquin Hernandez"
 
 
 
