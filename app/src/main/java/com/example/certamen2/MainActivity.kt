@@ -22,10 +22,9 @@ class MainActivity : AppCompatActivity() {
         val btReset = findViewById<Button>(R.id.btReset)
 
         btLogin.setOnClickListener {
-            if(etContra.text.toString().length == 0 || etUsuario.text.toString().length == 0)
-                Toast.makeText(this,"Los campos no pueden quedar vacíos", Toast.LENGTH_LONG).show()
-
-            if(etUsuario.text.toString() == usuario && etContra.text.toString() == password) {
+            if(etContra.text.toString().length == 0 || etUsuario.text.toString().length == 0) {
+                Toast.makeText(this, "Los campos no pueden quedar vacíos", Toast.LENGTH_LONG).show()
+            } else if(etUsuario.text.toString() == usuario && etContra.text.toString() == password) {
                 Toast.makeText(this, "Conexion Correcta", Toast.LENGTH_LONG).show()
                 val acceso = Intent(this, MenuOpciones::class.java)
                 startActivity(acceso)
