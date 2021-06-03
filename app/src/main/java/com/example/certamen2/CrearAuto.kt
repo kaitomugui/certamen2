@@ -31,20 +31,25 @@ class CrearAuto : AppCompatActivity() {
 
         //Evento para crear auto
         botonCrear.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this,"administracion", null, 1)
-            val bd = admin.writableDatabase
-            val registro = ContentValues()
-            registro.put("marca", edMarca.getText().toString())
-            registro.put("numero_chasis", edChasis.getText().toString())
-            registro.put("cilindrada", edCilindrada.getText().toString())
-            registro.put("tipo_auto", spTipoAuto.selectedItem.toString())
-            registro.put("detalle", edDescripcion.getText().toString())
-            registro.put("precio_venta", edPrecio.getText().toString())
-            registro.put("color", edColor.getText().toString())
-            bd.insert("autos", null, registro)
-            bd.close()
-            Toast.makeText(this, "Se cargaron los datos del Auto", Toast.LENGTH_SHORT).show()
-            finish()
+            if(edMarca.text.toString().length == 0 || edChasis.text.toString().length == 0 || edCilindrada.text.toString().length == 0 || edDescripcion.text.toString().length == 0
+                || edPrecio.text.toString().length == 0 || edColor.text.toString().length == 0) {
+                Toast.makeText(this, "Los campos no pueden quedar vacíos", Toast.LENGTH_LONG).show()
+            } else {
+                val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+                val bd = admin.writableDatabase
+                val registro = ContentValues()
+                registro.put("marca", edMarca.getText().toString())
+                registro.put("numero_chasis", edChasis.getText().toString())
+                registro.put("cilindrada", edCilindrada.getText().toString())
+                registro.put("tipo_auto", spTipoAuto.selectedItem.toString())
+                registro.put("detalle", edDescripcion.getText().toString())
+                registro.put("precio_venta", edPrecio.getText().toString())
+                registro.put("color", edColor.getText().toString())
+                bd.insert("autos", null, registro)
+                bd.close()
+                Toast.makeText(this, "Se cargaron los datos del Auto", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
 
         //Evento para limpiar formulario

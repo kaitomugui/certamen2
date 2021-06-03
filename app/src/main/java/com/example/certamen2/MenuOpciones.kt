@@ -28,6 +28,16 @@ class MenuOpciones : AppCompatActivity() {
             startActivity(acceso)
         }
 
+        bt3.setOnClickListener {
+            val acceso = Intent(this, ModificarAuto::class.java)
+            startActivity(acceso)
+        }
+
+        bt4.setOnClickListener {
+            val acceso = Intent(this, EliminarAuto::class.java)
+            startActivity(acceso)
+        }
+
         bt6.setOnClickListener {
             finish()
         }
@@ -36,6 +46,8 @@ class MenuOpciones : AppCompatActivity() {
             val acceso = Intent(this, AcercaDe::class.java)
             startActivity(acceso)
         }
+
+
 
 
 
