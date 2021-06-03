@@ -70,23 +70,28 @@ class ModificarAuto : AppCompatActivity() {
         }
 
         botonModificar.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
-            val bd = admin.writableDatabase
-            val registro = ContentValues()
-            registro.put("marca", edtMMarca.getText().toString())
-            registro.put("numero_chasis", edtMChasis.getText().toString())
-            registro.put("cilindrada", edtMCilindrada.getText().toString())
-            registro.put("tipo_auto", spMTipoAuto.selectedItem.toString())
-            registro.put("detalle", edtMDetalle.getText().toString())
-            registro.put("precio_venta", edtMPrecio.getText().toString())
-            registro.put("color", edtMColor.getText().toString())
-            val cant = bd.update("autos", registro, "id=${spMIdAutos.selectedItem.toString()}", null)
-            bd.close()
-            if (cant == 1) {
-                Toast.makeText(this, "Se modificaron los datos correctamente", Toast.LENGTH_SHORT).show()
-                finish()
-            }else
-                Toast.makeText(this, "no existe un auto con el id seleccionado", Toast.LENGTH_SHORT).show()
+            if(edtMMarca.text.toString().length == 0 || edtMChasis.text.toString().length == 0 || edtMCilindrada.text.toString().length == 0 || edtMDetalle.text.toString().length == 0
+                || edtMPrecio.text.toString().length == 0 || edtMColor.text.toString().length == 0) {
+                Toast.makeText(this, "Los campos no pueden quedar vacíos", Toast.LENGTH_LONG).show()
+            } else {
+                val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+                val bd = admin.writableDatabase
+                val registro = ContentValues()
+                registro.put("marca", edtMMarca.getText().toString())
+                registro.put("numero_chasis", edtMChasis.getText().toString())
+                registro.put("cilindrada", edtMCilindrada.getText().toString())
+                registro.put("tipo_auto", spMTipoAuto.selectedItem.toString())
+                registro.put("detalle", edtMDetalle.getText().toString())
+                registro.put("precio_venta", edtMPrecio.getText().toString())
+                registro.put("color", edtMColor.getText().toString())
+                val cant = bd.update("autos", registro, "id=${spMIdAutos.selectedItem.toString()}", null)
+                bd.close()
+                if (cant == 1) {
+                    Toast.makeText(this, "Se modificaron los datos correctamente", Toast.LENGTH_SHORT).show()
+                    finish()
+                }else
+                    Toast.makeText(this, "no existe un auto con el id seleccionado", Toast.LENGTH_SHORT).show()
+            }
         }
 
         botonSalir.setOnClickListener {
