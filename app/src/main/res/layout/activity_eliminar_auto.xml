@@ -11,10 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:text="EliminarAutos"
+        android:text="Eliminar Autos"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -23,24 +24,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="2dp"
         android:text="Seleccione ID"
-        app:layout_constraintEnd_toStartOf="@+id/spEAutos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/spEAutos" />
 
     <Spinner
         android:id="@+id/spEAutos"
-        android:layout_width="0dp"
+        android:layout_width="265dp"
         android:layout_height="28dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toTopOf="@+id/btEliminar"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toEndOf="@+id/tV2"
         app:layout_constraintTop_toBottomOf="@+id/tV1" />
 
@@ -48,19 +43,24 @@
         android:id="@+id/btESalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:text="Salir"
-        app:layout_constraintStart_toStartOf="@+id/spEAutos"
-        app:layout_constraintTop_toBottomOf="@+id/tV2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btEliminar"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btEliminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="49dp"
         android:text="Eliminar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btESalir"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:backgroundTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toEndOf="@+id/btESalir"
+        app:layout_constraintTop_toBottomOf="@+id/spEAutos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
