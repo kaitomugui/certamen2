@@ -18,7 +18,7 @@ class AcercaDe : AppCompatActivity() {
 
 
         TextViewADV.setText("Version: 1.0.0")
-        TextViewADD.setText("Esta aplicacion es una base de datos con el cual puede ingresar nuevos datos modificarlos y eliminarlos sin generar conflictos entre un auto y otro")
+        TextViewADD.setText("Esta aplicacion para una automotora con el cual se puede ingresar nuevos autos y poder modificarlos o eliminarlos ")
         TextViewADC.setText("Franco Ortega Humberto Ponce Joaquin Hernandez")
 
 
